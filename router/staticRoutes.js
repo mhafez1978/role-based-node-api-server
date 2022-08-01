@@ -1,4 +1,9 @@
 const AppHome = (req, res) => {
   res.render('index');
 };
-module.exports = { AppHome };
+
+const AppContact = (req, res) => {
+  res.render('contact');
+};
+
+module.exports = { AppHome, AppContact };

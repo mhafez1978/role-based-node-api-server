@@ -4,11 +4,11 @@ const main = (req, res) => {
   }
 
   if (req.method === 'GET' && req.url === '/login') {
-    res.send('login');
+    res.render('login');
   }
 
   if (req.method === 'GET' && req.url === '/register') {
-    res.send('register');
+    res.render('register');
   }
 
   if (req.method === 'POST' && req.url === '/login') {
@@ -22,7 +22,6 @@ const main = (req, res) => {
   if (req.method === 'GET' && req.url === '/logout') {
     res.send('logout');
   }
-  
 };
 
 module.exports = { main };

@@ -1,5 +1,20 @@
 <%- include('./layouts/header') %>
-<h1>RBAC Node API</h1>
-<p>Welcome to my node.js RBAC role based access control application.</p>
-<p>This is the Register Page of the app ...</p>
+<h1>Signup for a new account</h1>
+
+<form action="/auth/register" method="post">
+  <div>
+    <label for="email">Email/Username</label>
+    <input type="text" name="email" id="email" />
+  </div>
+  <div>
+    <label for="password">Password</label>
+    <input type="password" name="password" id="password" />
+  </div>
+  <div>
+    <input type="submit" value="register" />
+  </div>
+</form>
+<div>
+  <p>Already registered, please <a href="/auth/login">login</a> here</p>
+</div>
 <%- include('./layouts/footer') %>

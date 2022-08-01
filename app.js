@@ -1,6 +1,7 @@
 const StartMyApp = () => {
   const config = require('./config');
   const express = require('express');
+  
   const { Router } = require('express');
 
   const createHttpError = require('http-errors');
@@ -24,8 +25,10 @@ const StartMyApp = () => {
 
   // lets set the app to use specific views engine in this case ejs, but could use anything else ...
   app.set('view engine', 'ejs');
+
   // lets register public folder with express so we can use in our project
   app.use(express.static('public'));
+
   // which route are we hitting ?
   app.use(morgan('dev'));
 
@@ -43,6 +46,7 @@ const StartMyApp = () => {
   app.use(express.urlencoded({ extended: true }));
 
   // handling errors - part1
+  // if this is true kick off next (part2)
   app.use((req, res, next) => {
     next(createHttpError.NotFound());
   });
@@ -50,11 +54,13 @@ const StartMyApp = () => {
   app.use((error, req, res, next) => {
     error.status = error.status || 500;
     res.status(error.status);
-    res.send(error);
+    res.render('404');
   });
 
   // nested style rouuter
   staticRouter.get('/', staticRoutes.AppHome);
+  staticRouter.get('/contact', staticRoutes.AppContact);
+
   dynamicRouter.get('/test', dynamicRoutes.Test);
   // direct functional routing based on request and method of request
   authRouter.use('/auth', authRoutes.main);
