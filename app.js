@@ -9,12 +9,23 @@ const StartMyApp = () => {
 
   const staticRouter = Router();
   const dynamicRouter = Router();
+  const authRouter = Router();
+  const userRouter = Router();
 
   const staticRoutes = require('./router/staticRoutes.js');
+
   const dynamicRoutes = require('./router/dynamicRoutes.js');
+
+  const authRoutes = require('./router/authRoutes.js');
+
+  const userRoutes = require('./router/userRoutes.js');
 
   const app = express();
 
+  // lets set the app to use specific views engine in this case ejs, but could use anything else ...
+  app.set('view engine', 'ejs');
+  // lets register public folder with express so we can use in our project
+  app.use(express.static('public'));
   // which route are we hitting ?
   app.use(morgan('dev'));
 
@@ -25,6 +36,8 @@ const StartMyApp = () => {
 
   app.use(staticRouter);
   app.use(dynamicRouter);
+  app.use(authRouter);
+  app.use(userRouter);
 
   app.use(express.json());
   app.use(express.urlencoded({ extended: true }));
@@ -40,12 +53,12 @@ const StartMyApp = () => {
     res.send(error);
   });
 
+  // nested style rouuter
   staticRouter.get('/', staticRoutes.AppHome);
-
-  dynamicRouter.get('/test', (req, res) => {
-    // you can activate this in case of other fails ..
-    res.send('This is from Dynamic Router test ... ');
-  });
+  dynamicRouter.get('/test', dynamicRoutes.Test);
+  // direct functional routing based on request and method of request
+  authRouter.use('/auth', authRoutes.main);
+  userRouter.use('/user', userRoutes.main);
 
   // working with mongodb using mongoose ORM, and mongo compass, mongodb atlas cloud
   mongoose

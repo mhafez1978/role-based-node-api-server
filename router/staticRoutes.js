@@ -1,4 +1,4 @@
 const AppHome = (req, res) => {
-	res.send('Hello, this is home route response msg ...')
+  res.render('index');
 };
 module.exports = { AppHome };
