@@ -6,13 +6,15 @@
         <h4 style="color:#fff !important;">Signup for a New Account</h4>
       </center>
       <div class="container">
-        <div class="login">
+        <div class="login" style="width:500px !important">
           <form class="form" method="post" action="/auth/register">
             <h2>Your Basic Info</h2>
             <input type="text" name="fname" id="fname"  placeholder="First Name">
             <input type="text"  name="lname" id="lname" placeholder="Last Name">
-            <input type="text"  name="email" id="email" placeholder="Email/Username">
+            <input type="text"  name="username" id="username" placeholder="Username">
+            <input type="text"  name="email" id="email" placeholder="Email">
             <input type="password"  name="password" id="password" placeholder="Password">
+            <input type="password"  name="passwordConfirmation" id="passwordConfirmation" placeholder="Confirm Password">
             <input type="submit" value="Register" class="submit">
           </form>
           <p>

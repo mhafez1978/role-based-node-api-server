@@ -1,9 +1,22 @@
 <%- include('./layouts/header') %>
-<section id="hero" class="hero">
-  <div class="overlay">
-    <div class="hero-content">
-      <div class="container">
-        
+<section id="errorPage" class="errorPage">
+  <div class="row">
+    <div class="container">
+      <div class="error-content">
+       <h3>
+        HTTP Error Code: <%= error.status %>
+       </h3>
+       <p>
+        <h1>Houston we've got a small problem code 'T' Minus 404</h1>
+        Here's what you searched or queried : " <%= req.url %> " which returned nothing ...
+        <h2 style="color:red; font-size:49px;"><%= error.message %></h2>
+        We suggest you visit one of the following: 
+        <ul class="pt-4">
+          <li><a href ="/" >Homepage</a></li>
+          <li><a href="#" onclick="window.history.back()" >Go Back</a></li>
+        </ul>
+       </p>
+       
       </div>
     </div>
   </div>

@@ -90,10 +90,10 @@ section .loginContainer{
 	padding-top:20vh;
 	background-color: #05adf0;
 	.login {
-		width: 320px;
+		width: 400px;
 		min-height: 450px;
 		border: 1px solid #CCC;
-		background: url(https://media4.giphy.com/media/BHNfhgU63qrks/giphy.gif) center center no-repeat;
+		background: url(https://media4.giphy.com/media/3o7btXYBdJbW7QPKLu/giphy.gif) center center no-repeat;
 		background-size: cover;
 		margin: 30px auto;
 		border-radius: 20px;
@@ -202,4 +202,30 @@ section .loginContainer{
 	.fDescription{
 		margin-top:-20px !important;
 	}
+}
+
+.error-content{
+	padding-top: 100px;
+	min-height:90vh;
+	width:100%;
+	ul{
+		margin-left:-40px;
+	}
+	ul li{
+		list-style: none;
+		display: inline;
+		
+		
+	}
+	ul li a{
+		color:purple;
+		background-color: #fff;
+		border:1px solid purple;
+		padding: 10px 20px 10px 20px;
+	}
+	ul li a:hover{
+		text-decoration: none;
+	}
+	
+	
 }

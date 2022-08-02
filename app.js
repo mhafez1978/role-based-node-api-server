@@ -12,6 +12,8 @@ const StartMyApp = () => {
 
   // lets register public folder with express so we can use in our project
   app.use('/public', express.static(path.resolve('./public')));
+  // app.use(express.static('public'))
+
 
   
 
@@ -27,6 +29,7 @@ const StartMyApp = () => {
   // let's log requests in console
   app.use(morgan('dev'));
 
+
   // handling errors - part1
   // if route is unknown to our app our error handling should be triggered
   // this is true kick off next with the error (part2)
@@ -34,9 +37,9 @@ const StartMyApp = () => {
     next(createHttpError.NotFound());
   });
   // handling errors - part2
-  app.use((err, req, res, next) => {
-    err.status = err.status || 500;
-    res.status(err.status).render('404');
+  app.use((error, req, res, next) => {
+    error.status = error.status || 500;
+    res.status(error.status).render('404',{error,req});
   });
 
   // working with mongodb using mongoose ORM, and mongo compass, mongodb atlas cloud
