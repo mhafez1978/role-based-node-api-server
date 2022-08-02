@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon app.js",
-    "serve": "node app.js"
+    "serve": "node app.js",
+    "scss:build": "sass scss:public/styles"
   },
   "repository": {
     "type": "git",
@@ -23,10 +24,13 @@
     "nodemon": "^2.0.19"
   },
   "dependencies": {
+    "bootstrap": "^5.2.0",
     "ejs": "^3.1.8",
     "express": "^4.18.1",
     "http-errors": "^2.0.0",
+    "jquery": "^3.6.0",
     "mongoose": "^6.5.0",
-    "morgan": "^1.10.0"
+    "morgan": "^1.10.0",
+    "sass": "^1.54.0"
   }
 }

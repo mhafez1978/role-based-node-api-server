@@ -1,22 +1,26 @@
 <%- include('./layouts/header') %>
-<h1>User Login</h1>
-
-<form action="/auth/login" method="post">
-  <div>
-    <label for="email">Email/Username</label>
-    <input type="text" name="email" id="email" />
+<section>
+  <div class="loginContainer">
+    <div class="loginOverlay">
+      <center>
+        <h4 style="color:#fff !important;">Welcome Back</h4>
+      </center>
+      <div class="container">
+        <div class="login">
+          <form class="form" method="post" action="/auth/login">
+            <h2>Please Login</h2>
+            <input type="text" name="email" id="" placeholder="Username/Email">
+            <input type="password" name="password" id="password" placeholder="Password">
+            <input type="submit" value="Login" class="submit">
+          </form>
+          <p>
+            <center style="color:#fff">
+              Not a member yet ? Register <a style="color:#fff" href="/auth/register">here</a>
+            </center>
+          </p>
+        </div>
+      </div>
+    </div>
   </div>
-  <div>
-    <label for="password">Password</label>
-    <input type="password" name="password" id="password" />
-  </div>
-  <div>
-    <input type="submit" value="Login" />
-  </div>
-</form>
-<div>
-  <p>
-    Don't have an account ? please <a href="/auth/register">Register</a> here
-  </p>
-</div>
+</section>
 <%- include('./layouts/footer') %>

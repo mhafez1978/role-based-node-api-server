@@ -1,0 +1,205 @@
+@import 'https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@900&family=Ubuntu+Condensed&display=swap');
+
+.borderPop{
+	box-shadow: 2px 4px 8px #222;
+}
+
+.navbar{
+	.navbar-brand{
+		font-family: 'Poppins', sans-serif;
+	}
+	.nav-link{
+		font-family: 'Ubuntu Condensed', sans-serif;
+		font-size: 16px;		
+	}
+}
+
+.hero{
+	margin-top:55px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height:90vh;
+	background-image: url('https://options.bellinghamschools.org/wp-content/uploads/sites/26/2021/12/Optionsslider4web.jpg');
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	opacity: 1;
+	.overlay{
+		display: flex;
+		flex-direction: column;
+		height:90vh;
+		background-color: #05adf0;
+		width: 100%;
+		z-index:10 !important;
+		opacity: .85;
+		padding-top:25vh;
+		.hero-content{
+			margin: 0 auto;
+			opacity:1 !important;
+			z-index:20;
+			font-weight: 600;
+			h1{
+				color:#fff;
+				font-family: 'Poppins', sans-serif;
+				font-size: 4em;
+			}
+			h3{
+				color:navy;
+				font-size: 1.6em;
+				width:80%;
+				margin-top:20px;
+			}
+			p{
+				color:#fff;
+				font-size:1.2em;
+				width:60%;
+				margin:20px 0px 30px 0px;
+				font-family: 'Arial Narrow', Arial, sans-serif;
+				font-weight: 200;
+			}
+			.btn-outline{
+				width:30%;
+				border:1px solid navy;
+				color:navy;
+				&:hover{
+					border:1px solid #fff;
+					box-shadow:  0px 2px 2px #fff;
+					color:#fff;
+					background-color: #222;
+				}
+			}
+			.btn-outline-purple{
+				width:30%;
+				border:1px solid purple;
+				color:purple;
+				&:hover{
+					border:1px solid yellow;
+					box-shadow:  0px 2px 2px yellow;
+					color:yellow;
+					background-color: #222;
+				}
+			}
+		}
+	}
+	
+}
+section .loginContainer{
+	height:95vh;
+	padding-top:20vh;
+	background-color: #05adf0;
+	.login {
+		width: 320px;
+		min-height: 450px;
+		border: 1px solid #CCC;
+		background: url(https://media4.giphy.com/media/BHNfhgU63qrks/giphy.gif) center center no-repeat;
+		background-size: cover;
+		margin: 30px auto;
+		border-radius: 20px;
+		z-index: 300;
+	}
+	.login .form {
+		width: 100%;
+		height: 100%;
+		padding: 15px 25px;
+	}
+	.login .form h2 {
+		color: #FFF;
+		text-align: center;
+		font-weight: normal;
+		font-size: 18px;
+		margin-top: 40px;
+		margin-bottom: 20px;
+	}
+	.login .form input {
+		width: 100%;
+		height: 40px;
+		margin-top: 20px;
+		background: rgba(255,255,255,.5);
+		border: 1px solid rgba(255,255,255,.1);
+		padding: 0 15px;
+		color: #FFF;
+		border-radius: 5px;
+		font-size: 14px;
+	}
+	.login .form input:focus {
+		border: 1px solid rgba(255,255,255,.8);
+		outline: none;
+	}
+	::-webkit-input-placeholder {
+		color: #DDD;
+	}
+	.login .form input.submit {
+		background: rgba(255,255,255,.9);
+		color: #444;
+		font-size: 15px;
+		margin-top: 40px;
+		font-weight: bold;
+	}
+
+}
+
+.profile{
+	padding-top: 100px;
+	min-height:90vh;
+	.profileBasicInfo{
+		ul li{
+			list-style: none;
+			margin-left:-35px;
+			font-size: 26px;
+		}
+	}
+	.userImage{
+		text-align: center; 
+		img{
+			width:200px;
+			height:200px;
+		}
+	}
+}
+
+
+.footer{
+	text-align: justify;
+	min-height:400px;
+	padding-top:80px;
+	h5{
+		font-family: sans-serif;
+		font-size:90%;
+		font-weight: 800;
+		
+	}
+	p {
+		padding-top:5px;
+		font-size: 14px;
+		text-align: left;
+	}
+	ul li{
+		list-style: none;
+		margin-left:-40px;
+	}
+	ul li a{
+		color:#222;
+		font-size: 12px !important;
+	}
+	.moveUp{
+		margin-top:-10px !important;
+		text-align: right !important;
+		h3{
+			text-align: right !important;
+		}
+		p{
+			text-align: right !important;
+			
+		}
+	}
+	.fBrand{
+		font-family: 'Poppins', sans-serif;
+		font-size: 2em;
+		
+	}
+	.fDescription{
+		margin-top:-20px !important;
+	}
+}

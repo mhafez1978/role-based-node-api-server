@@ -1,23 +1,70 @@
 <%- include('./layouts/header') %>
+<% const PageTitle = 'User Profile' %>
+<% const userImage = 'https://www.kindpng.com/picc/m/722-7221920_placeholder-profile-image-placeholder-png-transparent-png.png' %>
 
-<button onClick="window.history.back()">
-  Go Back
-</button>
-<div>
-  <p>ID</p>
-  <p></p>
-</div>
-<div>
-  <p>Email/Username</p>
-  <p></p>
-</div>
-<div>
-  <p>Role</p>
-  <p></p>
-</div>
-<div>
-  <p>User Object</p>
-  <p></p>
-</div>
-
+<section id="profile" class="profile">
+      <div class="container">
+        <div class="row">
+          
+            <div class="col-lg-2 pl-4">
+              <h3>
+                <%= PageTitle %>
+              </h3>
+            </div>
+            <div class="col-lg-4 offset-6">
+              <div style="text-align:right" class="pr-4">
+                <button class="btn btn-outline-primary" onClick="window.history.back()">
+                  Go Back
+                </button>
+                <button class="btn btn-outline-primary" onClick="window.location.href='/user/dashboard'">
+                  User Dashboard
+                </button>
+                <button class="btn btn-outline-primary" onClick="window.location.href = '/auth/logout'">
+                  Logout
+                </button>
+              </div>
+            </div>
+        </div>
+        <div class="row">
+          <div class="panel pl-4 pt-4">
+            <div class="card pt-4 pb-4 pl-4 pr-4">
+              <div class="userImage">
+                <img src="<%= userImage %>" alt="user profile picture"/>
+              </div>
+            </div>
+            <div class="card pt-4 pb-4 pl-4 pr-4">
+              <h2>Current Profile Info:</h2>
+              <div class="profileBasicInfo">
+                <ul>
+                  <li>
+                    User Id: 1
+                  </li>
+                  <li>
+                    First Name: Mohamed
+                  </li>
+                  <li>
+                    Last Name: Hafez
+                  </li>
+                  <li>
+                    Email: mhafez1978@outlook.com
+                  </li>
+                  <li>
+                    Username: mhafez1978
+                  </li>
+                  <li class="pt-4">
+                    <button class="btn btn-primary" onClick="">
+                      Change Password
+                    </button>
+                    <button class="btn btn-danger" onClick="">
+                      Update Your Info
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+</section>
 <%- include('./layouts/footer') %>

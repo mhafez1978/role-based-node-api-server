@@ -1,0 +1,197 @@
+@import 'https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css';
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@900&family=Ubuntu+Condensed&display=swap");
+.borderPop {
+  box-shadow: 2px 4px 8px #222;
+}
+
+.navbar .navbar-brand {
+  font-family: "Poppins", sans-serif;
+}
+.navbar .nav-link {
+  font-family: "Ubuntu Condensed", sans-serif;
+  font-size: 16px;
+}
+
+.hero {
+  margin-top: 55px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 90vh;
+  background-image: url("https://options.bellinghamschools.org/wp-content/uploads/sites/26/2021/12/Optionsslider4web.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 1;
+}
+.hero .overlay {
+  display: flex;
+  flex-direction: column;
+  height: 90vh;
+  background-color: #05adf0;
+  width: 100%;
+  z-index: 10 !important;
+  opacity: 0.85;
+  padding-top: 25vh;
+}
+.hero .overlay .hero-content {
+  margin: 0 auto;
+  opacity: 1 !important;
+  z-index: 20;
+  font-weight: 600;
+}
+.hero .overlay .hero-content h1 {
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  font-size: 4em;
+}
+.hero .overlay .hero-content h3 {
+  color: navy;
+  font-size: 1.6em;
+  width: 80%;
+  margin-top: 20px;
+}
+.hero .overlay .hero-content p {
+  color: #fff;
+  font-size: 1.2em;
+  width: 60%;
+  margin: 20px 0px 30px 0px;
+  font-family: "Arial Narrow", Arial, sans-serif;
+  font-weight: 200;
+}
+.hero .overlay .hero-content .btn-outline {
+  width: 30%;
+  border: 1px solid navy;
+  color: navy;
+}
+.hero .overlay .hero-content .btn-outline:hover {
+  border: 1px solid #fff;
+  box-shadow: 0px 2px 2px #fff;
+  color: #fff;
+  background-color: #222;
+}
+.hero .overlay .hero-content .btn-outline-purple {
+  width: 30%;
+  border: 1px solid purple;
+  color: purple;
+}
+.hero .overlay .hero-content .btn-outline-purple:hover {
+  border: 1px solid yellow;
+  box-shadow: 0px 2px 2px yellow;
+  color: yellow;
+  background-color: #222;
+}
+
+section .loginContainer {
+  height: 95vh;
+  padding-top: 20vh;
+  background-color: #05adf0;
+}
+section .loginContainer .login {
+  width: 320px;
+  min-height: 450px;
+  border: 1px solid #CCC;
+  background: url(https://media4.giphy.com/media/BHNfhgU63qrks/giphy.gif) center center no-repeat;
+  background-size: cover;
+  margin: 30px auto;
+  border-radius: 20px;
+  z-index: 300;
+}
+section .loginContainer .login .form {
+  width: 100%;
+  height: 100%;
+  padding: 15px 25px;
+}
+section .loginContainer .login .form h2 {
+  color: #FFF;
+  text-align: center;
+  font-weight: normal;
+  font-size: 18px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+section .loginContainer .login .form input {
+  width: 100%;
+  height: 40px;
+  margin-top: 20px;
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0 15px;
+  color: #FFF;
+  border-radius: 5px;
+  font-size: 14px;
+}
+section .loginContainer .login .form input:focus {
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  outline: none;
+}
+section .loginContainer ::-webkit-input-placeholder {
+  color: #DDD;
+}
+section .loginContainer .login .form input.submit {
+  background: rgba(255, 255, 255, 0.9);
+  color: #444;
+  font-size: 15px;
+  margin-top: 40px;
+  font-weight: bold;
+}
+
+.profile {
+  padding-top: 100px;
+  min-height: 90vh;
+}
+.profile .profileBasicInfo ul li {
+  list-style: none;
+  margin-left: -35px;
+  font-size: 26px;
+}
+.profile .userImage {
+  text-align: center;
+}
+.profile .userImage img {
+  width: 200px;
+  height: 200px;
+}
+
+.footer {
+  text-align: justify;
+  min-height: 400px;
+  padding-top: 80px;
+}
+.footer h5 {
+  font-family: sans-serif;
+  font-size: 90%;
+  font-weight: 800;
+}
+.footer p {
+  padding-top: 5px;
+  font-size: 14px;
+  text-align: left;
+}
+.footer ul li {
+  list-style: none;
+  margin-left: -40px;
+}
+.footer ul li a {
+  color: #222;
+  font-size: 12px !important;
+}
+.footer .moveUp {
+  margin-top: -10px !important;
+  text-align: right !important;
+}
+.footer .moveUp h3 {
+  text-align: right !important;
+}
+.footer .moveUp p {
+  text-align: right !important;
+}
+.footer .fBrand {
+  font-family: "Poppins", sans-serif;
+  font-size: 2em;
+}
+.footer .fDescription {
+  margin-top: -20px !important;
+}
+
+/*# sourceMappingURL=index.css.map */
