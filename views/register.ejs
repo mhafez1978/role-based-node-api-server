@@ -18,12 +18,12 @@
         <div class="login" style="width:500px !important">
           <form class="form" method="post" action="/auth/register">
             <h2>Your Basic Info</h2>
-            <input type="text" name="fname" id="fname"  placeholder="First Name">
-            <input type="text"  name="lname" id="lname" placeholder="Last Name">
-            <input type="text"  name="username" id="username" placeholder="Username">
-            <input type="text"  name="email" id="email" placeholder="Email">
-            <input type="password"  name="password" id="password" placeholder="Password">
-            <input type="password"  name="passwordConfirmation" id="passwordConfirmation" placeholder="Confirm Password">
+            <input type="text" name="fname" id="fname"  placeholder="First Name" value="<%= locals.fname ? fname : '' %>">
+            <input type="text"  name="lname" id="lname" placeholder="Last Name" value="<%= locals.lname ? lname : '' %>">
+            <input type="text"  name="username" id="username" placeholder="Username" value="<%= locals.username ? username : '' %>">
+            <input type="text"  name="email" id="email" placeholder="Email" value="<%= locals.email ? email : '' %>">
+            <input type="password"  name="password" id="password" placeholder="Password" value="<%= locals.password ? password : '' %>">
+            <input type="password"  name="passwordConfirmation" id="passwordConfirmation" placeholder="Confirm Password" value="<%= locals.passwordConfirmation ? passwordConfirmation : '' %>">
             <input type="submit" value="Register" class="submit">
           </form>
           <p>
