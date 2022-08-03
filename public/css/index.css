@@ -216,4 +216,18 @@ section .loginContainer .login .form input.submit {
   text-decoration: none;
 }
 
+.flash-msg {
+  position: absolute;
+  padding-top: 75px;
+  padding-bottom: 40px;
+  padding-bottom: 10px;
+  width: 100%;
+}
+.flash-msg .messages {
+  width: 100%;
+}
+.flash-msg ul li {
+  list-style: none;
+}
+
 /*# sourceMappingURL=index.css.map */
